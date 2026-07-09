@@ -1,0 +1,5 @@
+.DS_Store
+*.bak
+*.bak-*
+knowledge/**/*.local.md
+BUSINESS.md
