@@ -12,11 +12,15 @@ STAMP="$(date +%Y%m%d-%H%M%S)"
 echo "==> Installing Lexi into: $CLAUDE_DIR"
 mkdir -p "$CLAUDE_DIR/agents" "$CLAUDE_DIR/skills" "$CLAUDE_DIR/lexi/knowledge"
 
+# Backups live OUTSIDE ~/.claude/skills so Claude Code never scans them as skills.
+BACKUP_DIR="$CLAUDE_DIR/.lexi-backups/$STAMP"
+
 backup_if_exists() {
   local target="$1"
   if [ -e "$target" ]; then
-    cp -R "$target" "${target}.bak-${STAMP}"
-    echo "    backed up existing -> ${target}.bak-${STAMP}"
+    mkdir -p "$BACKUP_DIR"
+    cp -R "$target" "$BACKUP_DIR/$(basename "$target")"
+    echo "    backed up existing -> $BACKUP_DIR/$(basename "$target")"
   fi
 }
 

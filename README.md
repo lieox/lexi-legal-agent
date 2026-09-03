@@ -34,7 +34,7 @@ Lexi depends on three groups of skills:
 
 ## Install
 ```bash
-git clone https://github.com/<your-username>/lexi-legal-agent.git
+git clone https://github.com/lieox/lexi-legal-agent.git
 cd lexi-legal-agent
 ./install.sh
 ```

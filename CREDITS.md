@@ -11,6 +11,7 @@ The eight `israeli-*` compliance skills are **third-party** skills from the open
 
 - **Source org:** https://github.com/skills-il
 - **License:** MIT (with LICENSE files in each category repo)
+- **Notice shipped here:** [`skills/LICENSE-THIRD-PARTY`](skills/LICENSE-THIRD-PARTY)
 
 Bundled skills and their source repository:
 
